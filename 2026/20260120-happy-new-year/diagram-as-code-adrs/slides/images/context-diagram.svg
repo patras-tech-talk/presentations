@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <!-- Background -->
+  <rect width="600" height="400" fill="#fff"/>
+
+  <!-- Title -->
+  <text x="300" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1a5490">System Context Diagram - E-Commerce</text>
+
+  <!-- User (Person shape) -->
+  <circle cx="100" cy="100" r="25" fill="#08427b"/>
+  <circle cx="100" cy="65" r="15" fill="#08427b"/>
+  <text x="100" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#08427b" font-weight="bold">Customer</text>
+  <text x="100" y="158" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#666">A person who buys</text>
+  <text x="100" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#666">products online</text>
+
+  <!-- Main System -->
+  <rect x="220" y="80" width="160" height="100" rx="5" fill="#1168bd" stroke="#0b4884" stroke-width="2"/>
+  <text x="300" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#fff" font-weight="bold">E-Commerce</text>
+  <text x="300" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#fff" font-weight="bold">Platform</text>
+  <text x="300" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#fff" opacity="0.9">[Software System]</text>
+  <text x="300" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#fff" opacity="0.8">Allows customers to browse</text>
+  <text x="300" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#fff" opacity="0.8">and purchase products</text>
+
+  <!-- External Systems -->
+  <!-- Payment Gateway -->
+  <rect x="450" y="60" width="120" height="70" rx="5" fill="#999" stroke="#666" stroke-width="1"/>
+  <text x="510" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#fff" font-weight="bold">Payment</text>
+  <text x="510" y="103" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#fff" font-weight="bold">Gateway</text>
+  <text x="510" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#fff" opacity="0.9">[External System]</text>
+
+  <!-- Email Service -->
+  <rect x="450" y="160" width="120" height="70" rx="5" fill="#999" stroke="#666" stroke-width="1"/>
+  <text x="510" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#fff" font-weight="bold">Email Service</text>
+  <text x="510" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#fff" opacity="0.9">[External System]</text>
+
+  <!-- Shipping API -->
+  <rect x="220" y="280" width="160" height="60" rx="5" fill="#999" stroke="#666" stroke-width="1"/>
+  <text x="300" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#fff" font-weight="bold">Shipping API</text>
+  <text x="300" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#fff" opacity="0.9">[External System]</text>
+
+  <!-- Arrows -->
+  <!-- User to System -->
+  <line x1="130" y1="100" x2="215" y2="120" stroke="#666" stroke-width="1.5"/>
+  <polygon points="215,120 205,115 205,125" fill="#666"/>
+  <text x="170" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#666">Browses and</text>
+  <text x="170" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#666">purchases</text>
+
+  <!-- System to Payment -->
+  <line x1="380" y1="110" x2="445" y2="95" stroke="#666" stroke-width="1.5"/>
+  <polygon points="445,95 435,90 435,100" fill="#666"/>
+  <text x="415" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#666">Processes</text>
+  <text x="415" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#666">payments</text>
+
+  <!-- System to Email -->
+  <line x1="380" y1="150" x2="445" y2="180" stroke="#666" stroke-width="1.5"/>
+  <polygon points="445,180 435,175 435,185" fill="#666"/>
+  <text x="415" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#666">Sends</text>
+  <text x="415" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#666">emails</text>
+
+  <!-- System to Shipping -->
+  <line x1="300" y1="180" x2="300" y2="275" stroke="#666" stroke-width="1.5"/>
+  <polygon points="300,275 295,265 305,265" fill="#666"/>
+  <text x="330" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#666">Gets shipping</text>
+  <text x="330" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#666">rates</text>
+
+  <!-- Legend -->
+  <rect x="20" y="350" width="15" height="15" rx="2" fill="#08427b"/>
+  <text x="40" y="362" font-family="Arial, sans-serif" font-size="9" fill="#333">Person</text>
+
+  <rect x="100" y="350" width="15" height="15" rx="2" fill="#1168bd"/>
+  <text x="120" y="362" font-family="Arial, sans-serif" font-size="9" fill="#333">Software System</text>
+
+  <rect x="220" y="350" width="15" height="15" rx="2" fill="#999"/>
+  <text x="240" y="362" font-family="Arial, sans-serif" font-size="9" fill="#333">External System</text>
+</svg>

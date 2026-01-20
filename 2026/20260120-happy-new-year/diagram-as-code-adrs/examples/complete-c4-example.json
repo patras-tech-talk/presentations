@@ -1,0 +1,714 @@
+{
+  "configuration" : { },
+  "description" : "A simple blog platform demonstrating all 4 C4 levels",
+  "documentation" : { },
+  "id" : 1,
+  "lastModifiedAgent" : "structurizr-ui",
+  "lastModifiedDate" : "2026-01-19T16:18:50Z",
+  "model" : {
+    "people" : [ {
+      "description" : "A person who reads blog posts",
+      "id" : "1",
+      "name" : "Reader",
+      "properties" : {
+        "structurizr.dsl.identifier" : "reader"
+      },
+      "relationships" : [ {
+        "description" : "Reads posts",
+        "destinationId" : "5",
+        "id" : "18",
+        "sourceId" : "1",
+        "tags" : "Relationship"
+      }, {
+        "description" : "Views blog",
+        "destinationId" : "6",
+        "id" : "22",
+        "sourceId" : "1",
+        "tags" : "Relationship",
+        "technology" : "HTTPS"
+      } ],
+      "tags" : "Element,Person,Reader"
+    }, {
+      "description" : "A person who writes blog posts",
+      "id" : "2",
+      "name" : "Author",
+      "properties" : {
+        "structurizr.dsl.identifier" : "author"
+      },
+      "relationships" : [ {
+        "description" : "Writes and publishes posts",
+        "destinationId" : "5",
+        "id" : "19",
+        "sourceId" : "2",
+        "tags" : "Relationship"
+      }, {
+        "description" : "Manages posts",
+        "destinationId" : "6",
+        "id" : "23",
+        "sourceId" : "2",
+        "tags" : "Relationship",
+        "technology" : "HTTPS"
+      } ],
+      "tags" : "Element,Person,Author"
+    } ],
+    "softwareSystems" : [ {
+      "description" : "Sends notification emails",
+      "documentation" : { },
+      "id" : "3",
+      "name" : "Email System",
+      "properties" : {
+        "structurizr.dsl.identifier" : "emailSystem"
+      },
+      "tags" : "Element,Software System,External"
+    }, {
+      "description" : "Google Analytics for tracking",
+      "documentation" : { },
+      "id" : "4",
+      "name" : "Analytics",
+      "properties" : {
+        "structurizr.dsl.identifier" : "analyticsSystem"
+      },
+      "tags" : "Element,Software System,External"
+    }, {
+      "containers" : [ {
+        "description" : "Serves the blog frontend",
+        "documentation" : { },
+        "id" : "6",
+        "name" : "Web Application",
+        "properties" : {
+          "structurizr.dsl.identifier" : "webApp"
+        },
+        "relationships" : [ {
+          "description" : "Makes API calls",
+          "destinationId" : "7",
+          "id" : "24",
+          "sourceId" : "6",
+          "tags" : "Relationship",
+          "technology" : "REST/JSON"
+        }, {
+          "description" : "Tracks views",
+          "destinationId" : "4",
+          "id" : "28",
+          "sourceId" : "6",
+          "tags" : "Relationship",
+          "technology" : "HTTPS"
+        }, {
+          "description" : "API calls",
+          "destinationId" : "8",
+          "id" : "29",
+          "sourceId" : "6",
+          "tags" : "Relationship",
+          "technology" : "HTTPS"
+        }, {
+          "description" : "API calls",
+          "destinationId" : "9",
+          "id" : "30",
+          "sourceId" : "6",
+          "tags" : "Relationship",
+          "technology" : "HTTPS"
+        } ],
+        "tags" : "Element,Container,Web Browser",
+        "technology" : "Next.js, React"
+      }, {
+        "components" : [ {
+          "description" : "REST API endpoints for posts",
+          "documentation" : { },
+          "id" : "8",
+          "name" : "Post Controller",
+          "properties" : {
+            "structurizr.dsl.identifier" : "postController"
+          },
+          "relationships" : [ {
+            "description" : "Validates token",
+            "destinationId" : "10",
+            "id" : "31",
+            "sourceId" : "8",
+            "tags" : "Relationship"
+          }, {
+            "description" : "Uses",
+            "destinationId" : "11",
+            "id" : "33",
+            "sourceId" : "8",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component",
+          "technology" : "Express Router"
+        }, {
+          "description" : "REST API endpoints for users",
+          "documentation" : { },
+          "id" : "9",
+          "name" : "User Controller",
+          "properties" : {
+            "structurizr.dsl.identifier" : "userController"
+          },
+          "relationships" : [ {
+            "description" : "Validates token",
+            "destinationId" : "10",
+            "id" : "32",
+            "sourceId" : "9",
+            "tags" : "Relationship"
+          }, {
+            "description" : "Uses",
+            "destinationId" : "12",
+            "id" : "34",
+            "sourceId" : "9",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component",
+          "technology" : "Express Router"
+        }, {
+          "description" : "JWT authentication",
+          "documentation" : { },
+          "id" : "10",
+          "name" : "Auth Middleware",
+          "properties" : {
+            "structurizr.dsl.identifier" : "authMiddleware"
+          },
+          "tags" : "Element,Component",
+          "technology" : "Express Middleware"
+        }, {
+          "description" : "Business logic for posts",
+          "documentation" : { },
+          "id" : "11",
+          "name" : "Post Service",
+          "properties" : {
+            "structurizr.dsl.identifier" : "postService"
+          },
+          "relationships" : [ {
+            "description" : "Uses",
+            "destinationId" : "14",
+            "id" : "35",
+            "sourceId" : "11",
+            "tags" : "Relationship"
+          }, {
+            "description" : "Notifies subscribers",
+            "destinationId" : "13",
+            "id" : "36",
+            "sourceId" : "11",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component",
+          "technology" : "TypeScript Class"
+        }, {
+          "description" : "Business logic for users",
+          "documentation" : { },
+          "id" : "12",
+          "name" : "User Service",
+          "properties" : {
+            "structurizr.dsl.identifier" : "userService"
+          },
+          "relationships" : [ {
+            "description" : "Uses",
+            "destinationId" : "15",
+            "id" : "37",
+            "sourceId" : "12",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component",
+          "technology" : "TypeScript Class"
+        }, {
+          "description" : "Sends emails via external provider",
+          "documentation" : { },
+          "id" : "13",
+          "name" : "Email Service",
+          "properties" : {
+            "structurizr.dsl.identifier" : "emailService"
+          },
+          "relationships" : [ {
+            "description" : "SMTP",
+            "destinationId" : "3",
+            "id" : "41",
+            "sourceId" : "13",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component",
+          "technology" : "TypeScript Class"
+        }, {
+          "description" : "Data access for posts",
+          "documentation" : { },
+          "id" : "14",
+          "name" : "Post Repository",
+          "properties" : {
+            "structurizr.dsl.identifier" : "postRepository"
+          },
+          "relationships" : [ {
+            "description" : "SQL queries",
+            "destinationId" : "16",
+            "id" : "38",
+            "sourceId" : "14",
+            "tags" : "Relationship"
+          }, {
+            "description" : "Cache queries",
+            "destinationId" : "17",
+            "id" : "39",
+            "sourceId" : "14",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component",
+          "technology" : "TypeORM Repository"
+        }, {
+          "description" : "Data access for users",
+          "documentation" : { },
+          "id" : "15",
+          "name" : "User Repository",
+          "properties" : {
+            "structurizr.dsl.identifier" : "userRepository"
+          },
+          "relationships" : [ {
+            "description" : "SQL queries",
+            "destinationId" : "16",
+            "id" : "40",
+            "sourceId" : "15",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component",
+          "technology" : "TypeORM Repository"
+        } ],
+        "description" : "Handles all business logic",
+        "documentation" : { },
+        "id" : "7",
+        "name" : "API Server",
+        "properties" : {
+          "structurizr.dsl.identifier" : "apiServer"
+        },
+        "relationships" : [ {
+          "description" : "Reads/Writes data",
+          "destinationId" : "16",
+          "id" : "25",
+          "sourceId" : "7",
+          "tags" : "Relationship",
+          "technology" : "TCP/5432"
+        }, {
+          "description" : "Caches data",
+          "destinationId" : "17",
+          "id" : "26",
+          "sourceId" : "7",
+          "tags" : "Relationship",
+          "technology" : "TCP/6379"
+        }, {
+          "description" : "Sends emails",
+          "destinationId" : "3",
+          "id" : "27",
+          "sourceId" : "7",
+          "tags" : "Relationship",
+          "technology" : "SMTP"
+        } ],
+        "tags" : "Element,Container",
+        "technology" : "Node.js, Express"
+      }, {
+        "description" : "Stores posts, users, comments",
+        "documentation" : { },
+        "id" : "16",
+        "name" : "Database",
+        "properties" : {
+          "structurizr.dsl.identifier" : "database"
+        },
+        "tags" : "Element,Container,Database",
+        "technology" : "PostgreSQL"
+      }, {
+        "description" : "Caches frequently accessed posts",
+        "documentation" : { },
+        "id" : "17",
+        "name" : "Cache",
+        "properties" : {
+          "structurizr.dsl.identifier" : "cache"
+        },
+        "tags" : "Element,Container,Database",
+        "technology" : "Redis"
+      } ],
+      "description" : "Allows authors to publish and readers to view blog posts",
+      "documentation" : { },
+      "id" : "5",
+      "name" : "Blog Platform",
+      "properties" : {
+        "structurizr.dsl.identifier" : "blogPlatform"
+      },
+      "relationships" : [ {
+        "description" : "Sends notifications",
+        "destinationId" : "3",
+        "id" : "20",
+        "sourceId" : "5",
+        "tags" : "Relationship"
+      }, {
+        "description" : "Sends page views",
+        "destinationId" : "4",
+        "id" : "21",
+        "sourceId" : "5",
+        "tags" : "Relationship"
+      } ],
+      "tags" : "Element,Software System"
+    } ]
+  },
+  "name" : "Blog Platform",
+  "properties" : {
+    "structurizr.inspection.info" : "0",
+    "structurizr.inspection.ignore" : "0",
+    "structurizr.inspection.error" : "18",
+    "structurizr.inspection.warning" : "0",
+    "structurizr.dsl" : "LyoKICogQ29tcGxldGUgQzQgTW9kZWwgRXhhbXBsZSAtIEFsbCA0IExldmVscwogKgogKiBBIHNpbXBsZSBibG9nIHBsYXRmb3JtIGRlbW9uc3RyYXRpbmc6CiAqIC0gTGV2ZWwgMTogU3lzdGVtIENvbnRleHQKICogLSBMZXZlbCAyOiBDb250YWluZXIKICogLSBMZXZlbCAzOiBDb21wb25lbnQKICogLSBMZXZlbCA0OiBDb2RlIChDbGFzcyBkaWFncmFtKQogKgogKiBUbyBydW46IGRvY2tlciBydW4gLWl0IC0tcm0gLXAgODA4MDo4MDgwIC12ICQocHdkKTovdXNyL2xvY2FsL3N0cnVjdHVyaXpyIHN0cnVjdHVyaXpyL2xpdGUKICovCgp3b3Jrc3BhY2UgIkJsb2cgUGxhdGZvcm0iICJBIHNpbXBsZSBibG9nIHBsYXRmb3JtIGRlbW9uc3RyYXRpbmcgYWxsIDQgQzQgbGV2ZWxzIiB7CgogICAgbW9kZWwgewogICAgICAgICMgPT09PT09PT09PT09PT09PT09PT09CiAgICAgICAgIyBMRVZFTCAxOiBDT05URVhUCiAgICAgICAgIyBQZW9wbGUgYW5kIGV4dGVybmFsIHN5c3RlbXMKICAgICAgICAjID09PT09PT09PT09PT09PT09PT09PQoKICAgICAgICByZWFkZXIgPSBwZXJzb24gIlJlYWRlciIgIkEgcGVyc29uIHdobyByZWFkcyBibG9nIHBvc3RzIiAiUmVhZGVyIgogICAgICAgIGF1dGhvciA9IHBlcnNvbiAiQXV0aG9yIiAiQSBwZXJzb24gd2hvIHdyaXRlcyBibG9nIHBvc3RzIiAiQXV0aG9yIgoKICAgICAgICAjIEV4dGVybmFsIHN5c3RlbXMKICAgICAgICBlbWFpbFN5c3RlbSA9IHNvZnR3YXJlU3lzdGVtICJFbWFpbCBTeXN0ZW0iICJTZW5kcyBub3RpZmljYXRpb24gZW1haWxzIiAiRXh0ZXJuYWwiCiAgICAgICAgYW5hbHl0aWNzU3lzdGVtID0gc29mdHdhcmVTeXN0ZW0gIkFuYWx5dGljcyIgIkdvb2dsZSBBbmFseXRpY3MgZm9yIHRyYWNraW5nIiAiRXh0ZXJuYWwiCgogICAgICAgICMgPT09PT09PT09PT09PT09PT09PT09CiAgICAgICAgIyBMRVZFTCAyOiBDT05UQUlORVJTCiAgICAgICAgIyBPdXIgc3lzdGVtIGFuZCBpdHMgY29udGFpbmVycwogICAgICAgICMgPT09PT09PT09PT09PT09PT09PT09CgogICAgICAgIGJsb2dQbGF0Zm9ybSA9IHNvZnR3YXJlU3lzdGVtICJCbG9nIFBsYXRmb3JtIiAiQWxsb3dzIGF1dGhvcnMgdG8gcHVibGlzaCBhbmQgcmVhZGVycyB0byB2aWV3IGJsb2cgcG9zdHMiIHsKCiAgICAgICAgICAgIHdlYkFwcCA9IGNvbnRhaW5lciAiV2ViIEFwcGxpY2F0aW9uIiAiU2VydmVzIHRoZSBibG9nIGZyb250ZW5kIiAiTmV4dC5qcywgUmVhY3QiICJXZWIgQnJvd3NlciIKCiAgICAgICAgICAgIGFwaVNlcnZlciA9IGNvbnRhaW5lciAiQVBJIFNlcnZlciIgIkhhbmRsZXMgYWxsIGJ1c2luZXNzIGxvZ2ljIiAiTm9kZS5qcywgRXhwcmVzcyIgewoKICAgICAgICAgICAgICAgICMgPT09PT09PT09PT09PT09PT09PT09CiAgICAgICAgICAgICAgICAjIExFVkVMIDM6IENPTVBPTkVOVFMKICAgICAgICAgICAgICAgICMgSW5zaWRlIHRoZSBBUEkgU2VydmVyCiAgICAgICAgICAgICAgICAjID09PT09PT09PT09PT09PT09PT09PQoKICAgICAgICAgICAgICAgIHBvc3RDb250cm9sbGVyID0gY29tcG9uZW50ICJQb3N0IENvbnRyb2xsZXIiICJSRVNUIEFQSSBlbmRwb2ludHMgZm9yIHBvc3RzIiAiRXhwcmVzcyBSb3V0ZXIiCiAgICAgICAgICAgICAgICB1c2VyQ29udHJvbGxlciA9IGNvbXBvbmVudCAiVXNlciBDb250cm9sbGVyIiAiUkVTVCBBUEkgZW5kcG9pbnRzIGZvciB1c2VycyIgIkV4cHJlc3MgUm91dGVyIgogICAgICAgICAgICAgICAgYXV0aE1pZGRsZXdhcmUgPSBjb21wb25lbnQgIkF1dGggTWlkZGxld2FyZSIgIkpXVCBhdXRoZW50aWNhdGlvbiIgIkV4cHJlc3MgTWlkZGxld2FyZSIKCiAgICAgICAgICAgICAgICBwb3N0U2VydmljZSA9IGNvbXBvbmVudCAiUG9zdCBTZXJ2aWNlIiAiQnVzaW5lc3MgbG9naWMgZm9yIHBvc3RzIiAiVHlwZVNjcmlwdCBDbGFzcyIKCiAgICAgICAgICAgICAgICB1c2VyU2VydmljZSA9IGNvbXBvbmVudCAiVXNlciBTZXJ2aWNlIiAiQnVzaW5lc3MgbG9naWMgZm9yIHVzZXJzIiAiVHlwZVNjcmlwdCBDbGFzcyIKICAgICAgICAgICAgICAgIGVtYWlsU2VydmljZSA9IGNvbXBvbmVudCAiRW1haWwgU2VydmljZSIgIlNlbmRzIGVtYWlscyB2aWEgZXh0ZXJuYWwgcHJvdmlkZXIiICJUeXBlU2NyaXB0IENsYXNzIgoKICAgICAgICAgICAgICAgIHBvc3RSZXBvc2l0b3J5ID0gY29tcG9uZW50ICJQb3N0IFJlcG9zaXRvcnkiICJEYXRhIGFjY2VzcyBmb3IgcG9zdHMiICJUeXBlT1JNIFJlcG9zaXRvcnkiCiAgICAgICAgICAgICAgICB1c2VyUmVwb3NpdG9yeSA9IGNvbXBvbmVudCAiVXNlciBSZXBvc2l0b3J5IiAiRGF0YSBhY2Nlc3MgZm9yIHVzZXJzIiAiVHlwZU9STSBSZXBvc2l0b3J5IgogICAgICAgICAgICB9CgogICAgICAgICAgICBkYXRhYmFzZSA9IGNvbnRhaW5lciAiRGF0YWJhc2UiICJTdG9yZXMgcG9zdHMsIHVzZXJzLCBjb21tZW50cyIgIlBvc3RncmVTUUwiICJEYXRhYmFzZSIKICAgICAgICAgICAgY2FjaGUgPSBjb250YWluZXIgIkNhY2hlIiAiQ2FjaGVzIGZyZXF1ZW50bHkgYWNjZXNzZWQgcG9zdHMiICJSZWRpcyIgIkRhdGFiYXNlIgogICAgICAgIH0KCiAgICAgICAgIyA9PT09PT09PT09PT09PT09PT09PT0KICAgICAgICAjIFJFTEFUSU9OU0hJUFMKICAgICAgICAjID09PT09PT09PT09PT09PT09PT09PQoKICAgICAgICAjIENvbnRleHQgbGV2ZWwgcmVsYXRpb25zaGlwcwogICAgICAgIHJlYWRlciAtPiBibG9nUGxhdGZvcm0gIlJlYWRzIHBvc3RzIgogICAgICAgIGF1dGhvciAtPiBibG9nUGxhdGZvcm0gIldyaXRlcyBhbmQgcHVibGlzaGVzIHBvc3RzIgogICAgICAgIGJsb2dQbGF0Zm9ybSAtPiBlbWFpbFN5c3RlbSAiU2VuZHMgbm90aWZpY2F0aW9ucyIKICAgICAgICBibG9nUGxhdGZvcm0gLT4gYW5hbHl0aWNzU3lzdGVtICJTZW5kcyBwYWdlIHZpZXdzIgoKICAgICAgICAjIENvbnRhaW5lciBsZXZlbCByZWxhdGlvbnNoaXBzCiAgICAgICAgcmVhZGVyIC0+IHdlYkFwcCAiVmlld3MgYmxvZyIgIkhUVFBTIgogICAgICAgIGF1dGhvciAtPiB3ZWJBcHAgIk1hbmFnZXMgcG9zdHMiICJIVFRQUyIKICAgICAgICB3ZWJBcHAgLT4gYXBpU2VydmVyICJNYWtlcyBBUEkgY2FsbHMiICJSRVNUL0pTT04iCiAgICAgICAgYXBpU2VydmVyIC0+IGRhdGFiYXNlICJSZWFkcy9Xcml0ZXMgZGF0YSIgIlRDUC81NDMyIgogICAgICAgIGFwaVNlcnZlciAtPiBjYWNoZSAiQ2FjaGVzIGRhdGEiICJUQ1AvNjM3OSIKICAgICAgICBhcGlTZXJ2ZXIgLT4gZW1haWxTeXN0ZW0gIlNlbmRzIGVtYWlscyIgIlNNVFAiCiAgICAgICAgd2ViQXBwIC0+IGFuYWx5dGljc1N5c3RlbSAiVHJhY2tzIHZpZXdzIiAiSFRUUFMiCgogICAgICAgICMgQ29tcG9uZW50IGxldmVsIHJlbGF0aW9uc2hpcHMKICAgICAgICB3ZWJBcHAgLT4gcG9zdENvbnRyb2xsZXIgIkFQSSBjYWxscyIgIkhUVFBTIgogICAgICAgIHdlYkFwcCAtPiB1c2VyQ29udHJvbGxlciAiQVBJIGNhbGxzIiAiSFRUUFMiCgogICAgICAgIHBvc3RDb250cm9sbGVyIC0+IGF1dGhNaWRkbGV3YXJlICJWYWxpZGF0ZXMgdG9rZW4iCiAgICAgICAgdXNlckNvbnRyb2xsZXIgLT4gYXV0aE1pZGRsZXdhcmUgIlZhbGlkYXRlcyB0b2tlbiIKCiAgICAgICAgcG9zdENvbnRyb2xsZXIgLT4gcG9zdFNlcnZpY2UgIlVzZXMiCiAgICAgICAgdXNlckNvbnRyb2xsZXIgLT4gdXNlclNlcnZpY2UgIlVzZXMiCgogICAgICAgIHBvc3RTZXJ2aWNlIC0+IHBvc3RSZXBvc2l0b3J5ICJVc2VzIgogICAgICAgIHBvc3RTZXJ2aWNlIC0+IGVtYWlsU2VydmljZSAiTm90aWZpZXMgc3Vic2NyaWJlcnMiCiAgICAgICAgdXNlclNlcnZpY2UgLT4gdXNlclJlcG9zaXRvcnkgIlVzZXMiCgogICAgICAgIHBvc3RSZXBvc2l0b3J5IC0+IGRhdGFiYXNlICJTUUwgcXVlcmllcyIKICAgICAgICBwb3N0UmVwb3NpdG9yeSAtPiBjYWNoZSAiQ2FjaGUgcXVlcmllcyIKICAgICAgICB1c2VyUmVwb3NpdG9yeSAtPiBkYXRhYmFzZSAiU1FMIHF1ZXJpZXMiCiAgICAgICAgZW1haWxTZXJ2aWNlIC0+IGVtYWlsU3lzdGVtICJTTVRQIgogICAgfQoKICAgIHZpZXdzIHsKICAgICAgICAjID09PT09PT09PT09PT09PT09PT09PQogICAgICAgICMgTEVWRUwgMTogU3lzdGVtIENvbnRleHQgRGlhZ3JhbQogICAgICAgICMgPT09PT09PT09PT09PT09PT09PT09CiAgICAgICAgc3lzdGVtQ29udGV4dCBibG9nUGxhdGZvcm0gIkxldmVsMV9Db250ZXh0IiAiTGV2ZWwgMTogU3lzdGVtIENvbnRleHQgLSBTaG93cyB0aGUgYmxvZyBwbGF0Zm9ybSBpbiBpdHMgZW52aXJvbm1lbnQiIHsKICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgICAgIGF1dG9MYXlvdXQKICAgICAgICB9CgogICAgICAgICMgPT09PT09PT09PT09PT09PT09PT09CiAgICAgICAgIyBMRVZFTCAyOiBDb250YWluZXIgRGlhZ3JhbQogICAgICAgICMgPT09PT09PT09PT09PT09PT09PT09CiAgICAgICAgY29udGFpbmVyIGJsb2dQbGF0Zm9ybSAiTGV2ZWwyX0NvbnRhaW5lcnMiICJMZXZlbCAyOiBDb250YWluZXJzIC0gU2hvd3MgdGhlIGNvbnRhaW5lcnMgaW5zaWRlIHRoZSBibG9nIHBsYXRmb3JtIiB7CiAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgICAgICBhdXRvTGF5b3V0CiAgICAgICAgfQoKICAgICAgICAjID09PT09PT09PT09PT09PT09PT09PQogICAgICAgICMgTEVWRUwgMzogQ29tcG9uZW50IERpYWdyYW0KICAgICAgICAjID09PT09PT09PT09PT09PT09PT09PQogICAgICAgIGNvbXBvbmVudCBhcGlTZXJ2ZXIgIkxldmVsM19Db21wb25lbnRzIiAiTGV2ZWwgMzogQ29tcG9uZW50cyAtIFNob3dzIHRoZSBjb21wb25lbnRzIGluc2lkZSB0aGUgQVBJIFNlcnZlciIgewogICAgICAgICAgICBpbmNsdWRlICoKICAgICAgICAgICAgYXV0b0xheW91dAogICAgICAgIH0KCiAgICAgICAgIyA9PT09PT09PT09PT09PT09PT09PT0KICAgICAgICAjIExFVkVMIDQ6IENvZGUKICAgICAgICAjCiAgICAgICAgIyBTdHJ1Y3R1cml6ciBkb2Vzbid0IHN1cHBvcnQgVU1MIGNsYXNzIGRpYWdyYW1zIGRpcmVjdGx5LgogICAgICAgICMgTGV2ZWwgNCBpcyB0eXBpY2FsbHk6CiAgICAgICAgIyAgIC0gQXV0by1nZW5lcmF0ZWQgZnJvbSBjb2RlIChUeXBlRG9jLCBKYXZhRG9jLCBldGMuKQogICAgICAgICMgICAtIE9mdGVuIHNraXBwZWQgKGNvZGUgSVMgdGhlIGRvY3VtZW50YXRpb24gYXQgdGhpcyBsZXZlbCkKICAgICAgICAjCiAgICAgICAgIyBCZWxvdyBpcyBhIERZTkFNSUMgVklFVyBzaG93aW5nIHJ1bnRpbWUgYmVoYXZpb3IgLQogICAgICAgICMgdGhlIGNsb3Nlc3QgYXBwcm94aW1hdGlvbiB0byBMZXZlbCA0IGluIFN0cnVjdHVyaXpyLgogICAgICAgICMgPT09PT09PT09PT09PT09PT09PT09CgogICAgICAgIGR5bmFtaWMgYXBpU2VydmVyICJMZXZlbDRfQ3JlYXRlUG9zdCIgIlNlcXVlbmNlOiBDcmVhdGluZyBhIG5ldyBibG9nIHBvc3QiIHsKICAgICAgICAgICAgd2ViQXBwIC0+IHBvc3RDb250cm9sbGVyICJQT1NUIC9hcGkvcG9zdHMiCiAgICAgICAgICAgIHBvc3RDb250cm9sbGVyIC0+IGF1dGhNaWRkbGV3YXJlICJWYWxpZGF0ZSBKV1QiCiAgICAgICAgICAgIGF1dGhNaWRkbGV3YXJlIC0+IHBvc3RDb250cm9sbGVyICJVc2VyIGF1dGhlbnRpY2F0ZWQiCiAgICAgICAgICAgIHBvc3RDb250cm9sbGVyIC0+IHBvc3RTZXJ2aWNlICJjcmVhdGVQb3N0KGRhdGEpIgogICAgICAgICAgICBwb3N0U2VydmljZSAtPiBwb3N0UmVwb3NpdG9yeSAic2F2ZShwb3N0KSIKICAgICAgICAgICAgcG9zdFJlcG9zaXRvcnkgLT4gZGF0YWJhc2UgIklOU0VSVCBJTlRPIHBvc3RzIgogICAgICAgICAgICBwb3N0U2VydmljZSAtPiBlbWFpbFNlcnZpY2UgIm5vdGlmeVN1YnNjcmliZXJzKHBvc3QpIgogICAgICAgICAgICBlbWFpbFNlcnZpY2UgLT4gZW1haWxTeXN0ZW0gIlNlbmQgZW1haWwiCiAgICAgICAgICAgIGF1dG9MYXlvdXQKICAgICAgICB9CgogICAgICAgICMgPT09PT09PT09PT09PT09PT09PT09CiAgICAgICAgIyBTVFlMRVMKICAgICAgICAjID09PT09PT09PT09PT09PT09PT09PQogICAgICAgIHN0eWxlcyB7CiAgICAgICAgICAgIGVsZW1lbnQgIlBlcnNvbiIgewogICAgICAgICAgICAgICAgc2hhcGUgUGVyc29uCiAgICAgICAgICAgICAgICBiYWNrZ3JvdW5kICMwODQyN2IKICAgICAgICAgICAgICAgIGNvbG9yICNmZmZmZmYKICAgICAgICAgICAgfQogICAgICAgICAgICBlbGVtZW50ICJSZWFkZXIiIHsKICAgICAgICAgICAgICAgIGJhY2tncm91bmQgIzA4NDI3YgogICAgICAgICAgICB9CiAgICAgICAgICAgIGVsZW1lbnQgIkF1dGhvciIgewogICAgICAgICAgICAgICAgYmFja2dyb3VuZCAjMGI1Mzk0CiAgICAgICAgICAgIH0KICAgICAgICAgICAgZWxlbWVudCAiU29mdHdhcmUgU3lzdGVtIiB7CiAgICAgICAgICAgICAgICBiYWNrZ3JvdW5kICMxMTY4YmQKICAgICAgICAgICAgICAgIGNvbG9yICNmZmZmZmYKICAgICAgICAgICAgfQogICAgICAgICAgICBlbGVtZW50ICJFeHRlcm5hbCIgewogICAgICAgICAgICAgICAgYmFja2dyb3VuZCAjOTk5OTk5CiAgICAgICAgICAgICAgICBjb2xvciAjZmZmZmZmCiAgICAgICAgICAgIH0KICAgICAgICAgICAgZWxlbWVudCAiQ29udGFpbmVyIiB7CiAgICAgICAgICAgICAgICBiYWNrZ3JvdW5kICM0MzhkZDUKICAgICAgICAgICAgICAgIGNvbG9yICNmZmZmZmYKICAgICAgICAgICAgfQogICAgICAgICAgICBlbGVtZW50ICJXZWIgQnJvd3NlciIgewogICAgICAgICAgICAgICAgc2hhcGUgV2ViQnJvd3NlcgogICAgICAgICAgICB9CiAgICAgICAgICAgIGVsZW1lbnQgIkRhdGFiYXNlIiB7CiAgICAgICAgICAgICAgICBzaGFwZSBDeWxpbmRlcgogICAgICAgICAgICB9CiAgICAgICAgICAgIGVsZW1lbnQgIkNvbXBvbmVudCIgewogICAgICAgICAgICAgICAgYmFja2dyb3VuZCAjODViYmYwCiAgICAgICAgICAgICAgICBjb2xvciAjMDAwMDAwCiAgICAgICAgICAgIH0KICAgICAgICB9CgogICAgICAgICMgVGhlbWUgKG9wdGlvbmFsIC0gZm9yIG5pY2VyIGRlZmF1bHQgc3R5bGluZykKICAgICAgICAjIHRoZW1lIGRlZmF1bHQKICAgIH0KfQ=="
+  },
+  "views" : {
+    "componentViews" : [ {
+      "automaticLayout" : {
+        "applied" : true,
+        "edgeSeparation" : 0,
+        "implementation" : "Graphviz",
+        "nodeSeparation" : 300,
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 300,
+        "vertices" : false
+      },
+      "containerId" : "7",
+      "description" : "Level 3: Components - Shows the components inside the API Server",
+      "dimensions" : {
+        "height" : 3219,
+        "width" : 3152
+      },
+      "elements" : [ {
+        "id" : "3",
+        "x" : 2501,
+        "y" : 2562
+      }, {
+        "id" : "6",
+        "x" : 989,
+        "y" : 162
+      }, {
+        "id" : "8",
+        "x" : 1364,
+        "y" : 762
+      }, {
+        "id" : "9",
+        "x" : 614,
+        "y" : 762
+      }, {
+        "id" : "10",
+        "x" : 989,
+        "y" : 1362
+      }, {
+        "id" : "11",
+        "x" : 1739,
+        "y" : 1362
+      }, {
+        "id" : "12",
+        "x" : 239,
+        "y" : 1362
+      }, {
+        "id" : "13",
+        "x" : 1739,
+        "y" : 1962
+      }, {
+        "id" : "14",
+        "x" : 989,
+        "y" : 1962
+      }, {
+        "id" : "15",
+        "x" : 239,
+        "y" : 1962
+      }, {
+        "id" : "16",
+        "x" : 239,
+        "y" : 2562
+      }, {
+        "id" : "17",
+        "x" : 989,
+        "y" : 2562
+      } ],
+      "externalContainerBoundariesVisible" : false,
+      "key" : "Level3_Components",
+      "name" : "Component View: Blog Platform - API Server",
+      "order" : 3,
+      "relationships" : [ {
+        "id" : "29"
+      }, {
+        "id" : "30"
+      }, {
+        "id" : "31"
+      }, {
+        "id" : "32"
+      }, {
+        "id" : "33"
+      }, {
+        "id" : "34"
+      }, {
+        "id" : "35"
+      }, {
+        "id" : "36"
+      }, {
+        "id" : "37"
+      }, {
+        "id" : "38"
+      }, {
+        "id" : "39"
+      }, {
+        "id" : "40"
+      }, {
+        "id" : "41"
+      } ]
+    } ],
+    "configuration" : {
+      "branding" : { },
+      "lastSavedView" : "Level4_CreatePost",
+      "metadataSymbols" : "SquareBrackets",
+      "styles" : {
+        "elements" : [ {
+          "background" : "#0b5394",
+          "tag" : "Author"
+        }, {
+          "background" : "#85bbf0",
+          "color" : "#000000",
+          "tag" : "Component"
+        }, {
+          "background" : "#438dd5",
+          "color" : "#ffffff",
+          "tag" : "Container"
+        }, {
+          "shape" : "Cylinder",
+          "tag" : "Database"
+        }, {
+          "background" : "#999999",
+          "color" : "#ffffff",
+          "tag" : "External"
+        }, {
+          "background" : "#08427b",
+          "color" : "#ffffff",
+          "shape" : "Person",
+          "tag" : "Person"
+        }, {
+          "background" : "#08427b",
+          "tag" : "Reader"
+        }, {
+          "background" : "#1168bd",
+          "color" : "#ffffff",
+          "tag" : "Software System"
+        }, {
+          "shape" : "WebBrowser",
+          "tag" : "Web Browser"
+        } ]
+      },
+      "terminology" : { }
+    },
+    "containerViews" : [ {
+      "automaticLayout" : {
+        "applied" : true,
+        "edgeSeparation" : 0,
+        "implementation" : "Graphviz",
+        "nodeSeparation" : 300,
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 300,
+        "vertices" : false
+      },
+      "description" : "Level 2: Containers - Shows the containers inside the blog platform",
+      "dimensions" : {
+        "height" : 2699,
+        "width" : 2370
+      },
+      "elements" : [ {
+        "id" : "1",
+        "x" : 645,
+        "y" : 143
+      }, {
+        "id" : "2",
+        "x" : 1345,
+        "y" : 143
+      }, {
+        "id" : "3",
+        "x" : 1720,
+        "y" : 2043
+      }, {
+        "id" : "4",
+        "x" : 1720,
+        "y" : 1443
+      }, {
+        "id" : "6",
+        "x" : 970,
+        "y" : 843
+      }, {
+        "id" : "7",
+        "x" : 970,
+        "y" : 1443
+      }, {
+        "id" : "16",
+        "x" : 220,
+        "y" : 2043
+      }, {
+        "id" : "17",
+        "x" : 970,
+        "y" : 2043
+      } ],
+      "externalSoftwareSystemBoundariesVisible" : false,
+      "key" : "Level2_Containers",
+      "name" : "Container View: Blog Platform",
+      "order" : 2,
+      "relationships" : [ {
+        "id" : "22"
+      }, {
+        "id" : "23"
+      }, {
+        "id" : "24"
+      }, {
+        "id" : "25"
+      }, {
+        "id" : "26"
+      }, {
+        "id" : "27"
+      }, {
+        "id" : "28"
+      } ],
+      "softwareSystemId" : "5"
+    } ],
+    "dynamicViews" : [ {
+      "automaticLayout" : {
+        "applied" : true,
+        "edgeSeparation" : 0,
+        "implementation" : "Graphviz",
+        "nodeSeparation" : 300,
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 300,
+        "vertices" : false
+      },
+      "description" : "Sequence: Creating a new blog post",
+      "dimensions" : {
+        "height" : 3239,
+        "width" : 3041
+      },
+      "elementId" : "7",
+      "elements" : [ {
+        "id" : "3",
+        "x" : 2391,
+        "y" : 2583
+      }, {
+        "id" : "6",
+        "x" : 220,
+        "y" : 183
+      }, {
+        "id" : "8",
+        "x" : 970,
+        "y" : 783
+      }, {
+        "id" : "10",
+        "x" : 970,
+        "y" : 183
+      }, {
+        "id" : "11",
+        "x" : 970,
+        "y" : 1383
+      }, {
+        "id" : "13",
+        "x" : 1628,
+        "y" : 1983
+      }, {
+        "id" : "14",
+        "x" : 878,
+        "y" : 1983
+      }, {
+        "id" : "16",
+        "x" : 878,
+        "y" : 2583
+      } ],
+      "externalBoundariesVisible" : false,
+      "key" : "Level4_CreatePost",
+      "name" : "Dynamic View: Blog Platform - API Server",
+      "order" : 4,
+      "relationships" : [ {
+        "description" : "POST /api/posts",
+        "id" : "29",
+        "order" : "1",
+        "response" : false
+      }, {
+        "description" : "Validate JWT",
+        "id" : "31",
+        "order" : "2",
+        "response" : false,
+        "vertices" : [ {
+          "x" : 1345,
+          "y" : 633
+        } ]
+      }, {
+        "description" : "User authenticated",
+        "id" : "31",
+        "order" : "3",
+        "response" : true,
+        "vertices" : [ {
+          "x" : 1045,
+          "y" : 633
+        } ]
+      }, {
+        "description" : "createPost(data)",
+        "id" : "33",
+        "order" : "4",
+        "response" : false
+      }, {
+        "description" : "save(post)",
+        "id" : "35",
+        "order" : "5",
+        "response" : false
+      }, {
+        "description" : "INSERT INTO posts",
+        "id" : "38",
+        "order" : "6",
+        "response" : false
+      }, {
+        "description" : "notifySubscribers(post)",
+        "id" : "36",
+        "order" : "7",
+        "response" : false
+      }, {
+        "description" : "Send email",
+        "id" : "41",
+        "order" : "8",
+        "response" : false
+      } ]
+    } ],
+    "systemContextViews" : [ {
+      "automaticLayout" : {
+        "applied" : true,
+        "edgeSeparation" : 0,
+        "implementation" : "Graphviz",
+        "nodeSeparation" : 300,
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 300,
+        "vertices" : false
+      },
+      "description" : "Level 1: System Context - Shows the blog platform in its environment",
+      "dimensions" : {
+        "height" : 2000,
+        "width" : 1600
+      },
+      "elements" : [ {
+        "id" : "1",
+        "x" : 250,
+        "y" : 143
+      }, {
+        "id" : "2",
+        "x" : 950,
+        "y" : 143
+      }, {
+        "id" : "3",
+        "x" : 200,
+        "y" : 1443
+      }, {
+        "id" : "4",
+        "x" : 950,
+        "y" : 1443
+      }, {
+        "id" : "5",
+        "x" : 575,
+        "y" : 843
+      } ],
+      "enterpriseBoundaryVisible" : true,
+      "key" : "Level1_Context",
+      "name" : "System Context View: Blog Platform",
+      "order" : 1,
+      "relationships" : [ {
+        "id" : "18"
+      }, {
+        "id" : "19"
+      }, {
+        "id" : "20"
+      }, {
+        "id" : "21"
+      } ],
+      "softwareSystemId" : "5"
+    } ]
+  }
+}

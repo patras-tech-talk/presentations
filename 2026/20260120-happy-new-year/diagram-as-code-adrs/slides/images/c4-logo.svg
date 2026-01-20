@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4a90d9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a5490;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="90" fill="url(#logoGrad)"/>
+
+  <!-- C4 Text -->
+  <text x="100" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="60" font-weight="bold" fill="#fff">C4</text>
+
+  <!-- Subtitle -->
+  <text x="100" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#fff" opacity="0.9">model</text>
+
+  <!-- Small boxes representing diagrams -->
+  <rect x="45" y="155" width="20" height="15" rx="2" fill="#fff" opacity="0.8"/>
+  <rect x="75" y="155" width="20" height="15" rx="2" fill="#fff" opacity="0.6"/>
+  <rect x="105" y="155" width="20" height="15" rx="2" fill="#fff" opacity="0.4"/>
+  <rect x="135" y="155" width="20" height="15" rx="2" fill="#fff" opacity="0.2"/>
+</svg>

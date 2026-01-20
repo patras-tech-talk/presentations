@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300">
+  <!-- Background -->
+  <rect width="500" height="300" fill="#f8f9fa"/>
+
+  <!-- Title -->
+  <text x="250" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1a5490">Documentation Maturity Model</text>
+
+  <!-- Pyramid levels -->
+  <!-- Level 1 - Bottom -->
+  <polygon points="50,270 450,270 400,230 100,230" fill="#e74c3c"/>
+  <text x="250" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#fff" font-weight="bold">Level 1: No Documentation</text>
+
+  <!-- Level 2 -->
+  <polygon points="100,230 400,230 350,190 150,190" fill="#e67e22"/>
+  <text x="250" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#fff" font-weight="bold">Level 2: Ad-hoc</text>
+
+  <!-- Level 3 -->
+  <polygon points="150,190 350,190 300,150 200,150" fill="#f39c12"/>
+  <text x="250" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#fff" font-weight="bold">Level 3: Structured</text>
+
+  <!-- Level 4 -->
+  <polygon points="200,150 300,150 275,110 225,110" fill="#27ae60"/>
+  <text x="250" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#fff" font-weight="bold">Level 4: Docs as Code</text>
+
+  <!-- Level 5 - Top -->
+  <polygon points="225,110 275,110 250,70" fill="#2980b9"/>
+  <text x="250" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#fff" font-weight="bold">L5</text>
+
+  <!-- Star for Level 5 -->
+  <polygon points="250,50 253,58 262,58 255,63 258,72 250,67 242,72 245,63 238,58 247,58" fill="#f1c40f"/>
+
+  <!-- Labels on right -->
+  <text x="460" y="255" text-anchor="start" font-family="Arial, sans-serif" font-size="9" fill="#666">"Code is the docs"</text>
+  <text x="410" y="215" text-anchor="start" font-family="Arial, sans-serif" font-size="9" fill="#666">Random wikis</text>
+  <text x="360" y="175" text-anchor="start" font-family="Arial, sans-serif" font-size="9" fill="#666">Templates</text>
+  <text x="310" y="135" text-anchor="start" font-family="Arial, sans-serif" font-size="9" fill="#666">Git + Reviews</text>
+  <text x="285" y="85" text-anchor="start" font-family="Arial, sans-serif" font-size="9" fill="#666">Living Docs!</text>
+
+  <!-- Goal arrow -->
+  <text x="250" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#2980b9" font-weight="bold">GOAL</text>
+</svg>

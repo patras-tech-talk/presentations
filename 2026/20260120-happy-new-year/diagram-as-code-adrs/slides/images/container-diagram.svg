@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 500">
+  <!-- Background -->
+  <rect width="700" height="500" fill="#fff"/>
+
+  <!-- Title -->
+  <text x="350" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1a5490">Container Diagram - E-Commerce Platform</text>
+
+  <!-- System boundary -->
+  <rect x="120" y="100" width="460" height="350" rx="5" fill="none" stroke="#1168bd" stroke-width="2" stroke-dasharray="5,5"/>
+  <text x="130" y="120" font-family="Arial, sans-serif" font-size="11" fill="#1168bd" font-weight="bold">E-Commerce Platform [Software System]</text>
+
+  <!-- User -->
+  <circle cx="50" cy="200" r="20" fill="#08427b"/>
+  <circle cx="50" cy="170" r="12" fill="#08427b"/>
+  <text x="50" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#08427b" font-weight="bold">Customer</text>
+
+  <!-- Web App -->
+  <rect x="140" y="140" width="100" height="70" rx="5" fill="#438dd5" stroke="#2d6eb5" stroke-width="1"/>
+  <text x="190" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#fff" font-weight="bold">Web App</text>
+  <text x="190" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#fff" opacity="0.9">[Container: React]</text>
+  <text x="190" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#fff" opacity="0.8">Storefront UI</text>
+
+  <!-- API Gateway -->
+  <rect x="290" y="140" width="100" height="70" rx="5" fill="#438dd5" stroke="#2d6eb5" stroke-width="1"/>
+  <text x="340" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#fff" font-weight="bold">API Gateway</text>
+  <text x="340" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#fff" opacity="0.9">[Container: Kong]</text>
+  <text x="340" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#fff" opacity="0.8">Routes requests</text>
+
+  <!-- Product Service -->
+  <rect x="160" y="260" width="100" height="70" rx="5" fill="#438dd5" stroke="#2d6eb5" stroke-width="1"/>
+  <text x="210" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#fff" font-weight="bold">Product</text>
+  <text x="210" y="298" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#fff" font-weight="bold">Service</text>
+  <text x="210" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#fff" opacity="0.9">[Node.js]</text>
+
+  <!-- Order Service -->
+  <rect x="300" y="260" width="100" height="70" rx="5" fill="#438dd5" stroke="#2d6eb5" stroke-width="1"/>
+  <text x="350" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#fff" font-weight="bold">Order</text>
+  <text x="350" y="298" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#fff" font-weight="bold">Service</text>
+  <text x="350" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#fff" opacity="0.9">[Spring Boot]</text>
+
+  <!-- User Service -->
+  <rect x="440" y="260" width="100" height="70" rx="5" fill="#438dd5" stroke="#2d6eb5" stroke-width="1"/>
+  <text x="490" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#fff" font-weight="bold">User</text>
+  <text x="490" y="298" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#fff" font-weight="bold">Service</text>
+  <text x="490" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#fff" opacity="0.9">[Node.js]</text>
+
+  <!-- Product DB -->
+  <ellipse cx="180" cy="400" rx="40" ry="25" fill="#438dd5" stroke="#2d6eb5" stroke-width="1"/>
+  <text x="180" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#fff" font-weight="bold">Product DB</text>
+  <text x="180" y="408" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#fff" opacity="0.9">[PostgreSQL]</text>
+
+  <!-- Order DB -->
+  <ellipse cx="350" cy="400" rx="40" ry="25" fill="#438dd5" stroke="#2d6eb5" stroke-width="1"/>
+  <text x="350" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#fff" font-weight="bold">Order DB</text>
+  <text x="350" y="408" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#fff" opacity="0.9">[PostgreSQL]</text>
+
+  <!-- User DB -->
+  <ellipse cx="510" cy="400" rx="40" ry="25" fill="#438dd5" stroke="#2d6eb5" stroke-width="1"/>
+  <text x="510" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#fff" font-weight="bold">User DB</text>
+  <text x="510" y="408" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#fff" opacity="0.9">[PostgreSQL]</text>
+
+  <!-- External: Payment -->
+  <rect x="600" y="250" width="80" height="50" rx="5" fill="#999" stroke="#666" stroke-width="1"/>
+  <text x="640" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#fff" font-weight="bold">Payment</text>
+  <text x="640" y="288" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#fff" opacity="0.9">[External]</text>
+
+  <!-- Arrows -->
+  <!-- User to Web App -->
+  <line x1="75" y1="190" x2="135" y2="175" stroke="#666" stroke-width="1"/>
+  <polygon points="135,175 125,170 125,180" fill="#666"/>
+
+  <!-- Web App to API Gateway -->
+  <line x1="240" y1="175" x2="285" y2="175" stroke="#666" stroke-width="1"/>
+  <polygon points="285,175 275,170 275,180" fill="#666"/>
+
+  <!-- API Gateway to Services -->
+  <line x1="340" y1="210" x2="230" y2="255" stroke="#666" stroke-width="1"/>
+  <polygon points="230,255 235,245 240,255" fill="#666"/>
+
+  <line x1="340" y1="210" x2="350" y2="255" stroke="#666" stroke-width="1"/>
+  <polygon points="350,255 345,245 355,245" fill="#666"/>
+
+  <line x1="340" y1="210" x2="470" y2="255" stroke="#666" stroke-width="1"/>
+  <polygon points="470,255 460,250 465,260" fill="#666"/>
+
+  <!-- Services to DBs -->
+  <line x1="210" y1="330" x2="190" y2="370" stroke="#666" stroke-width="1"/>
+  <polygon points="190,370 185,360 195,360" fill="#666"/>
+
+  <line x1="350" y1="330" x2="350" y2="370" stroke="#666" stroke-width="1"/>
+  <polygon points="350,370 345,360 355,360" fill="#666"/>
+
+  <line x1="490" y1="330" x2="505" y2="370" stroke="#666" stroke-width="1"/>
+  <polygon points="505,370 500,360 510,360" fill="#666"/>
+
+  <!-- Order Service to Payment -->
+  <line x1="400" y1="295" x2="595" y2="275" stroke="#666" stroke-width="1"/>
+  <polygon points="595,275 585,270 585,280" fill="#666"/>
+
+  <!-- Legend -->
+  <rect x="20" y="460" width="12" height="12" rx="2" fill="#08427b"/>
+  <text x="37" y="470" font-family="Arial, sans-serif" font-size="8" fill="#333">Person</text>
+
+  <rect x="90" y="460" width="12" height="12" rx="2" fill="#438dd5"/>
+  <text x="107" y="470" font-family="Arial, sans-serif" font-size="8" fill="#333">Container</text>
+
+  <ellipse cx="175" cy="466" rx="10" ry="6" fill="#438dd5"/>
+  <text x="190" y="470" font-family="Arial, sans-serif" font-size="8" fill="#333">Database</text>
+
+  <rect x="250" y="460" width="12" height="12" rx="2" fill="#999"/>
+  <text x="267" y="470" font-family="Arial, sans-serif" font-size="8" fill="#333">External</text>
+</svg>

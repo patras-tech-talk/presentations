@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <!-- Background -->
+  <rect width="800" height="400" fill="#f5f5f5"/>
+
+  <!-- Divider -->
+  <line x1="400" y1="50" x2="400" y2="380" stroke="#ccc" stroke-width="2" stroke-dasharray="5,5"/>
+
+  <!-- LEFT SIDE: Chaotic Whiteboard -->
+  <text x="200" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#c0392b">BEFORE</text>
+
+  <!-- Whiteboard background -->
+  <rect x="20" y="50" width="360" height="320" rx="5" fill="#f9f9f9" stroke="#ddd" stroke-width="2"/>
+
+  <!-- Faded/messy boxes - various colors, rotated, overlapping -->
+  <rect x="50" y="80" width="80" height="40" rx="3" fill="#ffcccc" opacity="0.7" transform="rotate(-5, 90, 100)"/>
+  <rect x="140" y="70" width="90" height="35" rx="3" fill="#cce5ff" opacity="0.6" transform="rotate(3, 185, 87)"/>
+  <rect x="250" y="90" width="70" height="45" rx="3" fill="#fff3cd" opacity="0.5" transform="rotate(-8, 285, 112)"/>
+
+  <rect x="40" y="150" width="85" height="40" rx="3" fill="#d4edda" opacity="0.6" transform="rotate(4, 82, 170)"/>
+  <rect x="160" y="140" width="75" height="50" rx="3" fill="#f8d7da" opacity="0.7" transform="rotate(-3, 197, 165)"/>
+  <rect x="270" y="155" width="90" height="35" rx="3" fill="#cce5ff" opacity="0.5" transform="rotate(6, 315, 172)"/>
+
+  <rect x="60" y="230" width="70" height="40" rx="3" fill="#fff3cd" opacity="0.6" transform="rotate(-7, 95, 250)"/>
+  <rect x="180" y="220" width="80" height="45" rx="3" fill="#e2d5f1" opacity="0.7" transform="rotate(2, 220, 242)"/>
+  <rect x="280" y="240" width="65" height="35" rx="3" fill="#ffcccc" opacity="0.5" transform="rotate(-4, 312, 257)"/>
+
+  <!-- Messy arrows - curved, crossing -->
+  <path d="M 130 100 Q 160 130 155 155" stroke="#666" stroke-width="1.5" fill="none" opacity="0.6"/>
+  <path d="M 230 95 Q 200 140 200 160" stroke="#888" stroke-width="1.5" fill="none" opacity="0.5"/>
+  <path d="M 285 135 Q 320 180 300 200" stroke="#666" stroke-width="1.5" fill="none" opacity="0.7"/>
+  <path d="M 95 190 Q 130 210 140 230" stroke="#999" stroke-width="1.5" fill="none" opacity="0.5"/>
+  <path d="M 235 185 Q 250 220 240 245" stroke="#777" stroke-width="1.5" fill="none" opacity="0.6"/>
+  <path d="M 125 170 Q 180 200 260 175" stroke="#888" stroke-width="1" fill="none" opacity="0.4" stroke-dasharray="3,3"/>
+  <path d="M 310 120 Q 350 200 310 260" stroke="#666" stroke-width="1.5" fill="none" opacity="0.5"/>
+
+  <!-- Post-it notes -->
+  <rect x="45" y="290" width="50" height="50" fill="#ffeb3b" transform="rotate(-8, 70, 315)" opacity="0.9"/>
+  <rect x="110" y="300" width="45" height="45" fill="#ff9800" transform="rotate(5, 132, 322)" opacity="0.8"/>
+  <rect x="310" y="70" width="55" height="55" fill="#4caf50" transform="rotate(12, 337, 97)" opacity="0.7"/>
+  <rect x="320" y="290" width="50" height="50" fill="#e91e63" transform="rotate(-3, 345, 315)" opacity="0.8"/>
+
+  <!-- Scribbled text (illegible) -->
+  <text x="70" y="105" font-family="Comic Sans MS, cursive" font-size="8" fill="#666" opacity="0.6" transform="rotate(-5, 70, 105)">API ???</text>
+  <text x="160" y="92" font-family="Comic Sans MS, cursive" font-size="7" fill="#666" opacity="0.5" transform="rotate(3, 160, 92)">Database?</text>
+  <text x="265" y="118" font-family="Comic Sans MS, cursive" font-size="8" fill="#666" opacity="0.5" transform="rotate(-8, 265, 118)">User</text>
+  <text x="55" y="175" font-family="Comic Sans MS, cursive" font-size="7" fill="#666" opacity="0.6" transform="rotate(4, 55, 175)">Auth svc</text>
+  <text x="175" y="170" font-family="Comic Sans MS, cursive" font-size="8" fill="#666" opacity="0.5" transform="rotate(-3, 175, 170)">Orders</text>
+  <text x="285" y="178" font-family="Comic Sans MS, cursive" font-size="7" fill="#666" opacity="0.5" transform="rotate(6, 285, 178)">Cache??</text>
+  <text x="75" y="255" font-family="Comic Sans MS, cursive" font-size="8" fill="#666" opacity="0.6" transform="rotate(-7, 75, 255)">Legacy</text>
+  <text x="195" y="248" font-family="Comic Sans MS, cursive" font-size="7" fill="#666" opacity="0.5" transform="rotate(2, 195, 248)">Frontend</text>
+
+  <!-- Post-it text -->
+  <text x="55" y="315" font-family="Comic Sans MS, cursive" font-size="7" fill="#333" transform="rotate(-8, 55, 315)">TODO:</text>
+  <text x="55" y="325" font-family="Comic Sans MS, cursive" font-size="6" fill="#333" transform="rotate(-8, 55, 325)">Ask John!</text>
+  <text x="325" y="100" font-family="Comic Sans MS, cursive" font-size="6" fill="#fff" transform="rotate(12, 325, 100)">URGENT</text>
+
+  <!-- Question marks and exclamation marks scattered -->
+  <text x="200" y="120" font-family="Arial" font-size="14" fill="#c0392b" opacity="0.7">?</text>
+  <text x="130" y="210" font-family="Arial" font-size="12" fill="#c0392b" opacity="0.6">??</text>
+  <text x="300" y="220" font-family="Arial" font-size="16" fill="#c0392b" opacity="0.5">!</text>
+  <text x="240" y="290" font-family="Arial" font-size="12" fill="#c0392b" opacity="0.6">?</text>
+
+  <!-- Erased/smudged area -->
+  <ellipse cx="180" cy="280" rx="40" ry="25" fill="#eee" opacity="0.8"/>
+
+  <!-- RIGHT SIDE: Clean C4 Context Diagram -->
+  <text x="600" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#27ae60">AFTER</text>
+
+  <!-- Clean background -->
+  <rect x="420" y="50" width="360" height="320" rx="5" fill="#fff" stroke="#e0e0e0" stroke-width="1"/>
+
+  <!-- Title -->
+  <text x="600" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#1a5490" font-weight="bold">System Context - E-Commerce Platform</text>
+
+  <!-- User (Person) - clean shape -->
+  <circle cx="480" cy="150" r="18" fill="#08427b"/>
+  <circle cx="480" cy="125" r="11" fill="#08427b"/>
+  <text x="480" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#08427b" font-weight="bold">Customer</text>
+  <text x="480" y="196" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#666">A person who</text>
+  <text x="480" y="206" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#666">buys products</text>
+
+  <!-- Main System - clean box -->
+  <rect x="545" y="120" width="110" height="75" rx="4" fill="#1168bd"/>
+  <text x="600" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#fff" font-weight="bold">E-Commerce</text>
+  <text x="600" y="163" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#fff" font-weight="bold">Platform</text>
+  <text x="600" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#fff" opacity="0.9">[Software System]</text>
+
+  <!-- External Systems - clean grey boxes -->
+  <rect x="690" y="100" width="75" height="50" rx="4" fill="#999999"/>
+  <text x="727" y="122" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#fff" font-weight="bold">Payment</text>
+  <text x="727" y="133" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#fff" font-weight="bold">Gateway</text>
+  <text x="727" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="#fff" opacity="0.9">[External]</text>
+
+  <rect x="690" y="165" width="75" height="50" rx="4" fill="#999999"/>
+  <text x="727" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#fff" font-weight="bold">Email Service</text>
+  <text x="727" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="#fff" opacity="0.9">[External]</text>
+
+  <rect x="545" y="250" width="110" height="45" rx="4" fill="#999999"/>
+  <text x="600" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#fff" font-weight="bold">Shipping API</text>
+  <text x="600" y="287" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="#fff" opacity="0.9">[External System]</text>
+
+  <!-- Clean arrows with labels -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
+    </marker>
+  </defs>
+
+  <!-- User to System -->
+  <line x1="505" y1="145" x2="540" y2="150" stroke="#666" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <text x="520" y="138" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="#666">Uses</text>
+
+  <!-- System to Payment -->
+  <line x1="655" y1="140" x2="685" y2="130" stroke="#666" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <text x="670" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="#666">Pays via</text>
+
+  <!-- System to Email -->
+  <line x1="655" y1="165" x2="685" y2="180" stroke="#666" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <text x="670" y="182" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="#666">Sends</text>
+
+  <!-- System to Shipping -->
+  <line x1="600" y1="195" x2="600" y2="245" stroke="#666" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <text x="620" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="#666">Ships via</text>
+
+  <!-- Legend -->
+  <rect x="440" y="320" width="10" height="10" rx="1" fill="#08427b"/>
+  <text x="455" y="329" font-family="Arial, sans-serif" font-size="7" fill="#333">Person</text>
+
+  <rect x="510" y="320" width="10" height="10" rx="1" fill="#1168bd"/>
+  <text x="525" y="329" font-family="Arial, sans-serif" font-size="7" fill="#333">System</text>
+
+  <rect x="580" y="320" width="10" height="10" rx="1" fill="#999"/>
+  <text x="595" y="329" font-family="Arial, sans-serif" font-size="7" fill="#333">External</text>
+
+  <!-- VS text in middle -->
+  <text x="400" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#666">vs</text>
+</svg>
