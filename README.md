@@ -6,6 +6,7 @@ Presentation materials and resources from [Patras Tech Talk](https://www.meetup.
 
 | # | Date | Event | Folder |
 |---|------|-------|--------|
+| 26 | Apr 29, 2026 | [AI && LN] | [20260429-ai-and-ln](./2026/20260429-ai-and-ln) |
 | 25 | Mar 1, 2026 | [Beyond the carnival] | [20260301-beyond-the-carnival](./2026/20260301-beyond-the-carnival) |
 | 24 | Jan 20, 2026 | [Happy New Year] | [20260120-happy-new-year](./2026/20260120-happy-new-year) |
 | 23 | Nov 15, 2025 | [Going international] | [20251115-going-international](./2025/20251115-going-international) |
