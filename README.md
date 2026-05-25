@@ -6,6 +6,7 @@ Presentation materials and resources from [Patras Tech Talk](https://www.meetup.
 
 | # | Date | Event | Folder |
 |---|------|-------|--------|
+| 27 | May 26, 2026 | [PrivCloud & Laws] | [20260526-privcloud-and-laws](./2026/20260526-privcloud-and-laws) |
 | 26 | Apr 29, 2026 | [AI && LN] | [20260429-ai-and-ln](./2026/20260429-ai-and-ln) |
 | 25 | Mar 1, 2026 | [Beyond the carnival] | [20260301-beyond-the-carnival](./2026/20260301-beyond-the-carnival) |
 | 24 | Jan 20, 2026 | [Happy New Year] | [20260120-happy-new-year](./2026/20260120-happy-new-year) |
