@@ -22,6 +22,8 @@ Presents a practical approach to designing and deploying a private cloud using P
 
 A talk on applying software engineering laws in day-to-day engineering practice.
 
+**Slides:** [Marp presentation](./software-engineering-laws-in-practice/presentation.md)
+
 ## About
 
 The gathering welcomes attendees for talks, discussion, and networking with the tech community of Patras. The program includes networking, with doors opening at 18:00 and closing at 21:00.
